@@ -124,22 +124,16 @@ class Linkedin:
                             try:
                                 self.chooseResume()
                                 button_selector = True
-                                step_counter = 0
                                 while button_selector:
                                     button_selector = self.driver.find_element(By.CSS_SELECTOR, "button[aria-label='Submit application'], button[aria-label='Continue to next step'], button[aria-label='Review your application']")
-                                    button_txt = button_selector.text
+                                    if not button_selector:
+                                        break
                                     button_selector.click()
                                     time.sleep(random.uniform(1, constants.botSpeed))
 
-                                    if button_txt == 'Submit application' or step_counter > 10:
-                                        break
-                                    step_counter += 1
-
-                                applied_message = "* 🥳 Just Applied to this job: " if step_counter <= 10 else "* 🥵 Too many steps for this job: "
-                                lineToWrite = jobProperties + " | " + applied_message  +str(offerPage)
+                                lineToWrite = jobProperties + " | " + "* 🥳 Just Applied to this job: "  +str(offerPage)
                                 self.displayWriteResults(lineToWrite)
                                 countApplied += 1
-                                
 
                             except:
                                 try:
@@ -188,7 +182,7 @@ class Linkedin:
         jobLocation = ""
 
         try:
-            jobTitle = self.driver.find_element(By.XPATH, "//h1[contains(@class, 'inline')]").get_attribute("innerHTML").strip()
+            jobTitle = self.driver.find_element(By.XPATH, "//h1[contains(@class, 'job-title')]").get_attribute("innerHTML").strip()
             res = [blItem for blItem in config.blackListTitles if (blItem.lower() in jobTitle.lower())]
             if (len(res) > 0):
                 jobTitle += "(blacklisted title: " + ' '.join(res) + ")"

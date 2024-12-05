@@ -36,7 +36,7 @@ sort = ["Recent"]
 #Blacklist companies you dont want to apply - ex: ["Apple","Google"]
 blacklistCompanies = []
 #Blaclist keywords in title - ex:["manager", ".Net"]
-blackListTitles = [".Net", "C#", "Sales", "Manager", "Node.js", "React", "Embedded", "Staff", "Principal" , "Firmware", "System", "Front", "data", 'architect']
+blackListTitles = [".Net", "C#", "Sales", "Manager", "Node.js", "React", "Embedded", "Staff", "Principal" , "Firmware"]
 #Follow companies after sucessfull application True - yes, False - no
 followCompanies = False
 #Below settings are for linkedin bot Pro, you can purchase monthly or yearly subscription to use them from me.

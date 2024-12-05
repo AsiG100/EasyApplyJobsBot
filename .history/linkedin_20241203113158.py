@@ -186,10 +186,12 @@ class Linkedin:
         textToWrite = ""
         jobTitle = ""
         jobLocation = ""
+        print('123')
 
         try:
-            jobTitle = self.driver.find_element(By.XPATH, "//h1[contains(@class, 'inline')]").get_attribute("innerHTML").strip()
+            jobTitle = self.driver.find_element(By.XPATH, "//h1[contains(@class, 'job-title')]").get_attribute("innerHTML").strip()
             res = [blItem for blItem in config.blackListTitles if (blItem.lower() in jobTitle.lower())]
+            print(res)
             if (len(res) > 0):
                 jobTitle += "(blacklisted title: " + ' '.join(res) + ")"
         except Exception as e:

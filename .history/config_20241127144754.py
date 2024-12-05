@@ -8,7 +8,7 @@ email = "asi.g100@gmail.com"
 password = "malkaG@19591991"
 
 #PRO FEATURE - Optional! run browser in headless mode, no browser screen will be shown it will work in background.
-headless = True
+headless = False
 #PRO FEATURE - Optional! If you left above credentials fields empty. For Firefox or Chrome enter profile dir to run the bot to prevent logging in your account each time
 # get Firefox profile path by typing following url: about:profiles
 firefoxProfileRootDir = r""
@@ -20,7 +20,7 @@ chromeProfilePath = r""
 # continent locations:["Europe", "Asia", "Australia", "NorthAmerica", "SouthAmerica", "Africa", "Australia"]
 location = ["Los Angeles"]
 # keywords related with your job search
-keywords = ["Back End Engineer", "Back End Developer", "Python Developer", "Python AWS", "Software Engineer", "Software Developer"]
+keywords = ["Back End Engineer", "Back End Developer", "AWS", "python", "Software Engineer", "Software Developer"]
 #job experience Level - ex:  ["Internship", "Entry level" , "Associate" , "Mid-Senior level" , "Director" , "Executive"]
 experienceLevels = [ "Mid-Senior level" ]
 #job posted date - ex: ["Any Time", "Past Month" , "Past Week" , "Past 24 hours"] - select only one
@@ -36,7 +36,7 @@ sort = ["Recent"]
 #Blacklist companies you dont want to apply - ex: ["Apple","Google"]
 blacklistCompanies = []
 #Blaclist keywords in title - ex:["manager", ".Net"]
-blackListTitles = [".Net", "C#", "Sales", "Manager", "Node.js", "React", "Embedded", "Staff", "Principal" , "Firmware", "System", "Front", "data", 'architect']
+blackListTitles = [".Net", "C#", "Sales", "Manager", "Node.js", "React", "Embedded", "Staff"]
 #Follow companies after sucessfull application True - yes, False - no
 followCompanies = False
 #Below settings are for linkedin bot Pro, you can purchase monthly or yearly subscription to use them from me.

@@ -177,7 +177,3 @@ geckodriver.log
 angelco.py
 globalLogicCode.py
 linkedinProCode.py
-
-# data files
-data/
-cookies/
